@@ -16,7 +16,7 @@ public class DestroyByContact : MonoBehaviour
 		Instantiate(explosion, transform.position, transform.rotation);
 		if (other.tag == "Player") 
 		{
-			Debug.Log("player tag");
+			//Debug.Log("player tag");
 			Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
 		}
 //		Debug.Log("555");
