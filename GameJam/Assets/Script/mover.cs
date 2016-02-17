@@ -20,5 +20,9 @@ public class mover : MonoBehaviour
 		{
 			rb.AddForce (Vector3.left * speed);
 		}
+		if (Input.GetKey (KeyCode.D)) 
+		{
+			rb.AddForce (Vector3.right * speed);
+		}
 	}
 }
