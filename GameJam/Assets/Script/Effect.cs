@@ -11,6 +11,7 @@ public class Effect : MonoBehaviour
 			Instantiate (playerExplosion, transform.position, transform.rotation);
 			Destroy (this.gameObject);
 		}
+
 	}
 
 }
