@@ -33,6 +33,7 @@ public class DestroyByContact : MonoBehaviour
 		{
 			//Debug.Log("player tag");
 			Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
+			gameController.GameOver ();
 		}
 //		Debug.Log("555");
 		gameController.AddScore (scoreValue);
