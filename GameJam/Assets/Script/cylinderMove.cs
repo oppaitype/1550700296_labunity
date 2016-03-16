@@ -1,18 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class mover : MonoBehaviour 
+public class cylinderMove : MonoBehaviour 
 {
 	public float speed;
+	
 	private Rigidbody rb;
-
-	void Start ()
+	
+	void Start()
 	{
 		rb = GetComponent<Rigidbody> ();
-	}
-
-	public void Jump ()
-	{
-		rb.velocity = (Vector3.up * speed);
+		rb.velocity = transform.right* speed;
 	}
 }
