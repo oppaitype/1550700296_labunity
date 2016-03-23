@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class gameControll : MonoBehaviour 
+public class Contro : MonoBehaviour
 {
 	public GameObject hazard;
 	public float delta = 1.5f;
@@ -24,11 +24,11 @@ public class gameControll : MonoBehaviour
 		{
 			for (int i = 0; i < hazardCount; i++)
 			{
-				
-				float haza = Random.Range (0.8f,4.6f);
-				GameObject hazard2 = (GameObject)Instantiate (hazard,new Vector3(-5,haza,0),Quaternion.identity);
-				hazard2.transform.Rotate(0,0,90);
-				
+
+				//float haza = Random.Range (0.8f,4.6f);
+				GameObject hazard2 = (GameObject)Instantiate (hazard,new Vector3(-1,-1,0),Quaternion.identity);
+				hazard2.transform.Rotate(90,0,0);
+
 				yield return new WaitForSeconds(spawnWait);
 			}
 			yield return new WaitForSeconds(waveWait);
