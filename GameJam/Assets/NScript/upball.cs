@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class mover : MonoBehaviour 
-{
+public class upball : MonoBehaviour {
+
 	public float speed;
 	private Rigidbody rd;
 	// Use this for initialization
@@ -11,11 +11,11 @@ public class mover : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	public void Jump() {
-		
-		
-		rd.AddForce (Vector3.up * speed);
-		
-		
+	public void Jume() {
+
+
+			rd.AddForce (Vector3.up * speed);
+
+	
 	}
 }
