@@ -32,12 +32,12 @@ public class Contro : MonoBehaviour
 			for (int i = 0; i < hazardCount; i++)
 			{
 
-				//float haza = Random.Range (0.8f,4.6f);
+				float haza = Random.Range (0.8f,4.6f);
 				GameObject hazard2 = (GameObject)Instantiate (hazard,new Vector3(-1,-1,0),Quaternion.identity);
 				hazard2.transform.Rotate(90,0,0);
-				GameObject hazard4 = (GameObject)Instantiate (hazard3,new Vector3(-3,0,0),Quaternion.identity);
+				GameObject hazard4 = (GameObject)Instantiate (hazard3,new Vector3(-3,haza,0),Quaternion.identity);
 				hazard2.transform.Rotate(90,0,0);
-				GameObject hazard6 = (GameObject)Instantiate (hazard5,new Vector3(-10,0,0),Quaternion.identity);
+				GameObject hazard6 = (GameObject)Instantiate (hazard5,new Vector3(-10,haza,0),Quaternion.identity);
 				hazard2.transform.Rotate(90,0,0);
 
 				yield return new WaitForSeconds(spawnWait);

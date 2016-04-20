@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class movecoin : MonoBehaviour{
@@ -10,9 +10,17 @@ public class movecoin : MonoBehaviour{
 	}
 	void OnCollisionEnter(Collision other)
 	{
-		if (other.gameObject.tag== "player") 
+		if (other.gameObject.tag == "player") 
+		{
+			Destroy (this.gameObject);
+		}
+		else if (other.gameObject.tag== "Cubeleft") 
 		{
 			Destroy(this.gameObject);
 		}
+
+		
 	}
+
+		
 }
