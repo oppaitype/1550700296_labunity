@@ -4,16 +4,21 @@ using System.Collections;
 public class Jump : MonoBehaviour {
 
 	public float speed;
-	private Rigidbody rd;
 	public int cout;
-	bool canjump;
-	// Use this for initialization
+    public GameObject shot;
+    public Transform shotSpawn;
+    public float fireRate;
+
+    private Rigidbody rd;
+    private float nextFire;
+
+    bool canjump;
+
+
 	void Start () {
 		rd = GetComponent<Rigidbody> ();
 		cout = 0;
 	}
-	
-	// Update is called once per frame
 	public void Jume() {
 
 		if (canjump || cout < 2) {
@@ -38,5 +43,13 @@ public class Jump : MonoBehaviour {
 			canjump = false;
 		}
 	}
+    void Update ()
+    {
+        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+        }
+    }
 
 }

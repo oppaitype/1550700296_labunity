@@ -9,6 +9,13 @@ public class shoot : MonoBehaviour
 		void Start ()
 		{   
 			rb = GetComponent<Rigidbody>();
-			rb.velocity = transform.forward * speed;
+			rb.velocity = transform.right * speed;
 		}
-	}
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "RedCude" || other.gameObject.tag == "Cubepre" || other.gameObject.tag == "coin" || other.gameObject.tag == "Cubeleft" || other.gameObject.tag == "Cubebase")
+        {
+            Destroy(this.gameObject);
+        }
+    }
+}

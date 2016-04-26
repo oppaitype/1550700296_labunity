@@ -2,12 +2,13 @@ using UnityEngine;
 using System.Collections;
 
 public class movecoin : MonoBehaviour{
-	
-	void Start()
+    //public Rigidbody rb;
+    void Start()
 	{
 		Rigidbody rb = GetComponent<Rigidbody> ();
 		rb.velocity = new Vector3 (5, 0, 0);
-	}
+        
+    }
 	void OnCollisionEnter(Collision other)
 	{
 		if (other.gameObject.tag == "player") 
@@ -21,6 +22,10 @@ public class movecoin : MonoBehaviour{
 
 		
 	}
+   /* void update()
+    {
+        rb.transform.rotation = Quaternion.Euler(0, 5, 0);
+    }*/
 
 		
 }
